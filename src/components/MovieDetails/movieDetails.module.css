@@ -60,7 +60,7 @@ a:hover {
   transition: all 0.2s;
 }
 .Btn:hover {
-  color: #000000;
+  color: #222222;
   background-color: silver;
-  border: 0.1em solid #000000;
+  border: 0.1em solid #222222;
 }
