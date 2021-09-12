@@ -26,15 +26,10 @@ export default function MoviesView() {
     }
 
     useEffect(() => {
-        location.search();
-         // eslint-disable-next-line
-    }, [location.search]);
-
-    useEffect(() => {
         if (location.search === '') {
             return;
         }
-        
+
         // if (!location?.state?.searchVal && !search) {
         //     return;
         // }
@@ -42,7 +37,7 @@ export default function MoviesView() {
         // if (!search) {
         //     setSearch(location?.state?.searchVal);
         // }
-
+        
         setLoading(true);
 
         SearchApi.fethMovieBySearch(location.search.slice(7))
@@ -63,9 +58,9 @@ export default function MoviesView() {
             console.log(error);
             }
         })
-            .finally(() => setLoading(false))
-        // eslint-disable-next-line react-hooks/exhaustive-deps
-    }, [search, error]); 
+        .finally(() => setLoading(false))
+
+    }, [search, error, location.search]);
 
     return (
         <>
@@ -82,7 +77,7 @@ export default function MoviesView() {
             
             {loaderStatus === 'nothingFound'
                 && search !== null
-                && <h1>Nothing is found.... Try again</h1>
+                && <h1>Nothing found.... Try again</h1>
             }
         </>
     );    

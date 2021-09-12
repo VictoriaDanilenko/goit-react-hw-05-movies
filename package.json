@@ -7,7 +7,7 @@
     "@testing-library/react": "^11.2.7",
     "@testing-library/user-event": "^12.8.3",
     "eslint-config-prettier": "^8.3.0",
-    "eslint-plugin-react-hooks": "^4.2.1-alpha-8f96c6b2a-20210909",
+    "eslint-plugin-react-hooks": "^4.2.1-alpha-cb8a50619-20210909",
     "modern-normalize": "^1.1.0",
     "react": "^17.0.2",
     "react-dom": "^17.0.2",
@@ -48,8 +48,10 @@
     "eslint": "^7.32.0",
     "netlify-cli": "^6.8.12"
   },
-  "plugins": ["react-hooks"],
+  "plugins": [
+    "react-hooks"
+  ],
   "rules": {
     "react-hooks/exhaustive-deps": 0
-    }
+  }
 }
